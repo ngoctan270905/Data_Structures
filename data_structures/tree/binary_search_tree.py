@@ -53,5 +53,20 @@ class BST:
 
 
     def remove_root(self, root, left=True):
-        if not root:
+        if not root.left and not root.right:
+            return None
+
+        if not root.left:
+            return root.right
+
+        if not root.right:
+            return root.left
+
+        prev = root
+
+        if left:
+            curr = root.left
+            if not curr.right:
+                root.value = curr.value
+                root.left = curr.left
 

@@ -16,7 +16,6 @@ class BinaryHeap:
         self._bubble_up(len(self._list) - 1)
 
 
-
     # Xem phần tử nhỏ nhất trong list
     def peek_min(self):
         if self.is_empty():
@@ -36,7 +35,6 @@ class BinaryHeap:
         self._list[1] = self._list.pop()
         self._bubble_down(1)
         return min_val
-
 
 
     # Hàm kiểm tra rỗng
